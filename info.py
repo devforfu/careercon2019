@@ -1,5 +1,7 @@
 import numpy as np
 
+id_cols = ['row_id', 'series_id', 'group_id']
+
 x_cols = {
     'row_id': str,
     'series_id': np.uint32,
