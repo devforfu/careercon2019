@@ -2,5 +2,10 @@
 !.gitignore
 **/*.py[cod]
 **/__pycache__
-*.(feather|pickle|npy|npz|csv|txt)
+*.feather
+*.pickle
+*.npy
+*.npz
+*.csv
+*.txt
 

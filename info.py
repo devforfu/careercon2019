@@ -1,6 +1,6 @@
 import numpy as np
 
-id_cols = ['row_id', 'series_id', 'group_id']
+id_cols = ['row_id', 'series_id', 'group_id', 'measurement_number']
 
 x_cols = {
     'row_id': str,
