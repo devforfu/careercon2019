@@ -1,4 +1,5 @@
 import feather
+import numpy as np
 import pandas as pd
 
 from basedir import DATA
