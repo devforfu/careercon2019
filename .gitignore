@@ -8,4 +8,4 @@
 *.npz
 *.csv
 *.txt
-
+catboost_info/
