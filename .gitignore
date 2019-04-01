@@ -8,4 +8,5 @@
 *.npz
 *.csv
 *.txt
+*.pth
 catboost_info/
