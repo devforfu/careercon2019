@@ -1,6 +1,8 @@
 import numpy as np
 
-id_cols = ['row_id', 'series_id', 'group_id', 'measurement_number']
+# id_cols = ['row_id', 'series_id', 'group_id', 'measurement_number']
+
+ID_COLS = ['series_id', 'measurement_number']
 
 x_cols = {
     'row_id': str,
@@ -23,4 +25,6 @@ y_cols = {
     'group_id': np.uint32,
     'surface': str
 }
+
+
 
