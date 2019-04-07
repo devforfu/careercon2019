@@ -42,7 +42,7 @@ def float64(data): return data.astype(np.float64)
 
 
 def split(data, target, n_splits=5, seed=None, verbose=True, fold_cls=None):
-    fold_cls = StratifiedKFold if folds_cls is None else fold_cls
+    fold_cls = StratifiedKFold if fold_cls is None else fold_cls
     kfold = fold_cls(n_splits=n_splits, shuffle=True, random_state=seed)
     idx = np.arange(len(data))
     for i, (trn_idx, val_idx) in enumerate(kfold.split(idx, target), 1):
@@ -59,4 +59,8 @@ def kfolds(data, target, n_splits=5, seed=None, verbose=False):
             data[data.index.isin(trn_idx)],
             data[data.index.isin(val_idx)],
             target[target.index.isin(trn_idx)],
-            targer[target.index.isin(val_idx)])
+            target[target.index.isin(val_idx)])
+
+
+def replace_not_numbers(data, const=0):
+    return data.fillna(const).replace(-np.inf, const).replace(+np.inf, const)
